@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steve Armstrong — visual art, 1975–2026</title>
+<meta name="description" content="Steve Armstrong is a visual artist working in painting, collage, and mixed media since 1975. Browse the archive by decade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <a class="mark" href="index.html">Steve Armstrong<small>Wegway Primary Culture</small></a>
+  <nav class="site-nav">
+    <a href="index.html" aria-current="page">Work</a>
+    <a href="cv.html">C.V.</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="nft.html">MechanicalAura NFTs</a>
+    <a href="substack.html">Writing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Archive — 1975 to 2026</p>
+    <h1>Steve Armstrong</h1>
+    <p class="lede">A working archive of painting, collage, and mixed media spanning five decades — from early ledger drawings to the recent Blue Cube and Chardin Ball series.</p>
+    <div class="hero-cta">
+      <a class="primary" href="#ledger">Browse the ledger ↓</a>
+      <a href="cv.html">Read the C.V.</a>
+    </div>
+  </div>
+  <div class="hero-figure" id="heroFigure">
+    <div class="cap" id="heroCap">
+      <span>Specimen — <span class="idx">001</span></span>
+      <span class="y">—</span>
+    </div>
+  </div>
+</section>
+
+<section class="ledger" id="ledger">
+  <nav class="ledger-tabs" id="ledgerTabs" aria-label="Jump to year"></nav>
+  <div class="ledger-main" id="ledgerMain"></div>
+</section>
+
+<footer class="site-foot">
+  <span>© Steve Armstrong. Rebuilt archive, 2026.</span>
+  <span>wegway.ca</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">Close ✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous work">← Prev</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next work">Next →</button>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script src="gallery_data.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Steve Armstrong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <a class="mark" href="index.html">Steve Armstrong<small>Wegway Primary Culture</small></a>
+  <nav class="site-nav">
+    <a href="index.html">Work</a>
+    <a href="cv.html">C.V.</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="nft.html">MechanicalAura NFTs</a>
+    <a href="substack.html">Writing</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <p class="page-eyebrow">Get in touch</p>
+  <h1>Contact</h1>
+
+  <p class="note">This form opens the visitor's email client addressed to the placeholder below — swap in your real address (and, if you'd rather use a hosted form service like Formspree, this is easy to wire up instead).</p>
+
+  <ul class="contact-list">
+    <li><span>Email</span> <a href="mailto:hello@wegway.ca">hello@wegway.ca</a></li>
+    <li><span>Studio</span> <span>[City, Province]</span></li>
+  </ul>
+
+  <h2>Send a message</h2>
+  <form id="contactForm" action="mailto:hello@wegway.ca" method="post" enctype="text/plain">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button class="btn" type="submit">Send message</button>
+  </form>
+</main>
+
+<footer class="site-foot">
+  <span>© Steve Armstrong. Rebuilt archive, 2026.</span>
+  <span>wegway.ca</span>
+</footer>
+</body>
+</html>

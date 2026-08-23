@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing — Steve Armstrong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <a class="mark" href="index.html">Steve Armstrong<small>Wegway Primary Culture</small></a>
+  <nav class="site-nav">
+    <a href="index.html">Work</a>
+    <a href="cv.html">C.V.</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="nft.html">MechanicalAura NFTs</a>
+    <a href="substack.html">Writing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <p id="postLoading">Loading…</p>
+
+  <article id="postArticle" class="post-article" hidden>
+    <p class="page-eyebrow">Wegway — newsletter</p>
+    <h1 id="postTitle"></h1>
+    <p id="postSubtitle" class="post-subtitle" hidden></p>
+    <p id="postDate" class="post-date"></p>
+    <div id="postHero" class="post-hero" hidden><img id="postHeroImg" src="" alt=""></div>
+    <div id="postBody" class="post-body"></div>
+    <p class="note">This is a copy hosted on wegway.ca. <a id="postOriginalLink" href="https://wegway.substack.com" target="_blank" rel="noopener">Read the original on Substack →</a></p>
+  </article>
+
+  <div id="postNotFound" hidden>
+    <p class="page-eyebrow">Writing</p>
+    <h1>Post not found</h1>
+    <p>That post isn't in the local archive yet. Try <a href="substack.html">the Writing list</a>, or read it directly on <a href="https://wegway.substack.com/archive" target="_blank" rel="noopener">Substack</a>.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <span>© Steve Armstrong. Rebuilt archive, 2026.</span>
+  <span>wegway.ca</span>
+</footer>
+
+<script src="writing_posts_data.js"></script>
+<script src="post.js"></script>
+</body>
+</html>
