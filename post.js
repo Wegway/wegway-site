@@ -66,10 +66,47 @@
     });
   }
 
-  function sanitizeHtml(rawHtml) {
+  function s3Key(url) {
+    if (!url) return null;
+    var m = /substack-post-media\.s3\.amazonaws\.com(?:%2F|\/)([^&\s"]+)/.exec(url);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  // Substack often sets a post's cover image to the same photo that's
+  // already the lead image inside the body — without this, that photo
+  // would render twice (once as the hero, once again in the article).
+  function removeDuplicateLeadImage(root, coverUrl) {
+    var coverKey = s3Key(coverUrl);
+    if (!coverKey) return;
+    var firstImg = root.querySelector('img');
+    if (!firstImg || s3Key(firstImg.getAttribute('src')) !== coverKey) return;
+
+    var target = firstImg.closest('figure') || firstImg.parentElement;
+    var parent = target && target.parentElement;
+    if (!parent) return;
+    target.remove();
+
+    var node = parent;
+    var depth = 0;
+    while (node && node !== root && depth < 3) {
+      var meaningful = Array.prototype.some.call(node.childNodes, function (c) {
+        return c.nodeType === Node.ELEMENT_NODE ||
+          (c.nodeType === Node.TEXT_NODE && c.textContent.trim() !== '');
+      });
+      if (meaningful) break;
+      var gp = node.parentElement;
+      if (!gp) break;
+      node.remove();
+      node = gp;
+      depth++;
+    }
+  }
+
+  function sanitizeHtml(rawHtml, coverUrl) {
     var doc = new DOMParser().parseFromString('<div>' + rawHtml + '</div>', 'text/html');
     var root = doc.body.firstChild;
     walk(root);
+    if (coverUrl) removeDuplicateLeadImage(root, coverUrl);
     return root.innerHTML;
   }
 
@@ -126,12 +163,13 @@
           return it.link && it.link.replace(/\/$/, '').split('/p/')[1] === slug;
         });
         if (!item) { showNotFound(); return; }
+        var cover = coverImageFrom(item);
         render({
           title: item.title,
           subtitle: (item.description || '').trim(),
           date: item.pubDate.replace(' ', 'T') + 'Z',
-          coverImage: coverImageFrom(item),
-          bodyHtml: sanitizeHtml(item.content || ''),
+          coverImage: cover,
+          bodyHtml: sanitizeHtml(item.content || '', cover),
           substackUrl: item.link
         });
       })
