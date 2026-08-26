@@ -26,27 +26,23 @@
   <p class="page-eyebrow">Get in touch</p>
   <h1>Contact</h1>
 
-  <p class="note">This form opens the visitor's email client addressed to the placeholder below — swap in your real address (and, if you'd rather use a hosted form service like Formspree, this is easy to wire up instead).</p>
-
-  <ul class="contact-list">
-    <li><span>Email</span> <a href="mailto:hello@wegway.ca">hello@wegway.ca</a></li>
-    <li><span>Studio</span> <span>[City, Province]</span></li>
-  </ul>
+  <p class="note" id="contactNote">Messages sent through this form go straight to my inbox — your email address here is only used to reply to you, and mine is never shown on this page.</p>
 
   <h2>Send a message</h2>
-  <form id="contactForm" action="mailto:hello@wegway.ca" method="post" enctype="text/plain">
+  <form id="contactForm" action="https://formspree.io/f/mvkopzbe" method="POST">
     <div class="field">
       <label for="name">Name</label>
       <input id="name" name="name" type="text" required>
     </div>
     <div class="field">
-      <label for="email">Email</label>
+      <label for="email">Your email</label>
       <input id="email" name="email" type="email" required>
     </div>
     <div class="field">
       <label for="message">Message</label>
       <textarea id="message" name="message" required></textarea>
     </div>
+    <input type="hidden" name="_subject" value="New message from wegway.ca">
     <button class="btn" type="submit">Send message</button>
   </form>
 </main>
