@@ -686,6 +686,15 @@ nav.site-nav a[aria-current="page"] {
 
 /* ---------- Footer ---------- */
 
+.site-foot-head {
+  border-bottom: none;
+  border-top: 1px solid var(--rule);
+}
+
+.site-foot-head + .site-foot {
+  border-top: none;
+}
+
 footer.site-foot {
   border-top: 1px solid var(--rule);
   padding: 22px clamp(18px, 4vw, 48px);
