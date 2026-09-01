@@ -482,6 +482,15 @@ nav.site-nav a[aria-current="page"] {
   display: block;
 }
 
+.pdf-embed {
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+  border: 1px solid var(--rule);
+  margin: 0 0 20px;
+  background: var(--paper-dim);
+}
+
 .post-body {
   font-size: 18px;
   line-height: 1.65;
