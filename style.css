@@ -482,49 +482,15 @@ nav.site-nav a[aria-current="page"] {
   display: block;
 }
 
-.pdf-cover-menu {
-  position: relative;
+.pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.pdf-cover-trigger {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.pdf-cover-trigger img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.pdf-cover-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-  z-index: 10;
-}
-
-.pdf-cover-dropdown[hidden] { display: none; }
-
-.pdf-cover-dropdown a {
-  display: block;
-  padding: 14px 18px;
-  font-family: var(--f-mono);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--ink);
+.pdf-actions .btn {
+  display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
 }
 
 .pdf-cover-dropdown a:last-child { border-bottom: none; }
