@@ -493,11 +493,19 @@ nav.site-nav a[aria-current="page"] {
   text-decoration: none;
 }
 
-.pdf-cover-dropdown a:last-child { border-bottom: none; }
+.pdf-reader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 28px;
+}
 
-.pdf-cover-dropdown a:hover {
+.pdf-reader img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
   background: var(--paper-dim);
-  color: var(--blue);
 }
 
 .post-body {
