@@ -26,7 +26,15 @@
   <p class="page-eyebrow">Wegway Primary Culture — <a href="magazine.html">Magazine</a></p>
   <h1>Wegway 7</h1>
 
-  <div class="post-hero"><a href="magazine-images/wegway-7-cover-large.jpg" target="_blank" rel="noopener"><img src="magazine-images/wegway-7-cover.jpg" alt="Cover of Wegway 7, by Davida Kidd"></a></div>
+  <div class="post-hero pdf-cover-menu">
+    <button class="pdf-cover-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+      <img src="magazine-images/wegway-7-cover.jpg" alt="Cover of Wegway 7, by Davida Kidd">
+    </button>
+    <div class="pdf-cover-dropdown" hidden>
+      <a href="magazine-pdfs/wegway-7-sample-pages.pdf" target="_blank" rel="noopener">Read in browser</a>
+      <a href="magazine-pdfs/wegway-7-sample-pages.pdf" download>Download</a>
+    </div>
+  </div>
 
   <p>Issue 7 of Wegway, the magazine of artists' projects, includes essays, art, and interviews.</p>
 
@@ -37,7 +45,6 @@
 
   <h2>Sample pages</h2>
   <p>This PDF contains the entire contents of issue number seven, which is available for viewing right here on this website, or if you consider it worthwhile, you may download it with impunity.</p>
-  <iframe class="pdf-embed" src="magazine-pdfs/wegway-7-sample-pages.pdf" title="Wegway 7 PDF"></iframe>
   <p><a href="magazine-pdfs/wegway-7-sample-pages.pdf" class="btn" target="_blank" rel="noopener" style="display:inline-block; text-decoration:none;">Open Wegway 7 in a new tab / download →</a></p>
 
   <p><a href="magazine.html">← Back to Magazine</a></p>
@@ -61,5 +68,7 @@
   <span>wegway.ca</span>
 </div>
 </footer>
+
+<script src="pdf-cover-menu.js"></script>
 </body>
 </html>
