@@ -319,7 +319,7 @@ nav.site-nav a[aria-current="page"] {
 
 /* Masonry gallery via CSS columns so native aspect ratios survive */
 .gallery {
-  column-width: 260px;
+  column-width: 150px;
   column-gap: 14px;
 }
 
