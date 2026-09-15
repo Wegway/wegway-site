@@ -10,7 +10,7 @@ const GALLERY = [
   {"i": 8, "url": "work-images/1979-untitled-envelope.jpg", "year": 1979, "decade": 1970},
   {"i": 9, "url": "work-images/1979-compact-numbered-object.jpg", "year": 1979, "decade": 1970},
   {"i": 10, "url": "work-images/1983-fresco.jpg", "year": 1983, "decade": 1980},
-  {"i": 11, "url": "work-images/1985-oil-pegboard-cloud.jpg", "year": 1985, "decade": 1980},
+  {"i": 11, "url": "work-images/1985-oil-pegboard-cloud.png", "year": 1985, "decade": 1980},
   {"i": 12, "url": "work-images/1985-graphite-drawing.jpg", "year": 1985, "decade": 1980},
   {"i": 13, "url": "work-images/1985-acrylic-lino-masonite.jpg", "year": 1985, "decade": 1980},
   {"i": 14, "url": "work-images/1987-acrylic-wood.jpg", "year": 1987, "decade": 1980},
