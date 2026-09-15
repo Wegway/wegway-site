@@ -4,5 +4,17 @@ const GALLERY = [
   {"i": 2, "url": "work-images/1975-sawcut-drawing-3.jpg", "year": 1975, "decade": 1970},
   {"i": 3, "url": "work-images/1975-sawcut-drawing-4.jpg", "year": 1975, "decade": 1970},
   {"i": 4, "url": "work-images/1975-notebook.jpg", "year": 1975, "decade": 1970},
-  {"i": 5, "url": "work-images/1975-painting-acrylic-canvas.jpg", "year": 1975, "decade": 1970}
+  {"i": 5, "url": "work-images/1975-painting-acrylic-canvas.jpg", "year": 1975, "decade": 1970},
+  {"i": 6, "url": "work-images/1976-installation-view.jpg", "year": 1976, "decade": 1970},
+  {"i": 7, "url": "work-images/1976-numbered-object-enamel-brass-wood.jpg", "year": 1976, "decade": 1970},
+  {"i": 8, "url": "work-images/1979-untitled-envelope.jpg", "year": 1979, "decade": 1970},
+  {"i": 9, "url": "work-images/1979-compact-numbered-object.jpg", "year": 1979, "decade": 1970},
+  {"i": 10, "url": "work-images/1983-fresco.jpg", "year": 1983, "decade": 1980},
+  {"i": 11, "url": "work-images/1985-oil-pegboard-cloud.jpg", "year": 1985, "decade": 1980},
+  {"i": 12, "url": "work-images/1985-graphite-drawing.jpg", "year": 1985, "decade": 1980},
+  {"i": 13, "url": "work-images/1985-acrylic-lino-masonite.jpg", "year": 1985, "decade": 1980},
+  {"i": 14, "url": "work-images/1987-acrylic-wood.jpg", "year": 1987, "decade": 1980},
+  {"i": 15, "url": "work-images/1987-primer-lino-plywood.jpg", "year": 1987, "decade": 1980},
+  {"i": 16, "url": "work-images/1989-acrylic-plasticine-plywood.jpg", "year": 1989, "decade": 1980},
+  {"i": 17, "url": "work-images/1990-salmon-checker.jpg", "year": 1990, "decade": 1990}
 ];
