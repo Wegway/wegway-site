@@ -16,5 +16,6 @@ const GALLERY = [
   {"i": 14, "url": "work-images/1987-acrylic-wood.jpg", "year": 1987, "decade": 1980},
   {"i": 15, "url": "work-images/1987-primer-lino-plywood.jpg", "year": 1987, "decade": 1980},
   {"i": 16, "url": "work-images/1989-acrylic-plasticine-plywood.jpg", "year": 1989, "decade": 1980},
-  {"i": 17, "url": "work-images/1990-salmon-checker.jpg", "year": 1990, "decade": 1990}
+  {"i": 17, "url": "work-images/1990-salmon-checker.jpg", "year": 1990, "decade": 1990},
+  {"i": 18, "url": "work-images/1991-thread-epoxy-plywood.jpg", "year": 1991, "decade": 1990}
 ];
