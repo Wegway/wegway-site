@@ -68,3 +68,45 @@ delete its whole `<div class="entry-row">…</div>` line.
 The same `entry-row` pattern is used on the Magazine pages. Headings
 elsewhere are `<h2>Some heading</h2>`; a normal paragraph is
 `<p>Some text.</p>`.
+
+## Adding an image
+
+1. Go to `github.com/Wegway/wegway-site` and open the right folder for
+   what you're adding (`work-images/` for Work gallery pieces,
+   `magazine-images/` for magazine covers, `nft-thumbs/` for NFT
+   cards, etc.).
+2. Click **Add file → Upload files** (top right of the file list).
+3. Drag your image in. Give it a simple, descriptive filename first
+   (lowercase, hyphens, no spaces — e.g. `1992-untitled-collage.jpg`)
+   since GitHub won't let you rename after upload without an extra
+   step.
+4. Scroll down, click **Commit changes**.
+
+Uploading the file isn't enough on its own — most pages won't display
+it until something references it:
+
+- **Work gallery** (`index.html`): also needs a new line in
+  `gallery_data.js` — copy an existing line, change the `url`, `year`,
+  and `decade`.
+- **NFT page, magazine covers, etc.**: needs an `<img>` tag added to
+  the relevant `.html` file pointing at the new file's path, same
+  pattern as the C.V. entries above.
+
+## Deleting an image (or any file)
+
+1. Open the file on GitHub (click into the folder, click the
+   filename).
+2. Click the trash-can icon (top right of the file view).
+3. Commit.
+4. Remove whatever pointed at it (the `<img>` tag or the
+   `gallery_data.js` line) — otherwise that spot on the site shows a
+   broken image icon instead of just disappearing cleanly.
+
+## Image size
+
+Photos straight off a phone or camera are often much bigger than the
+site needs — the existing images are all resized so the longest edge
+is ~1024px. Uploading full-size photos still works, it just makes the
+site slower to load. Either resize first (Preview app → File → Export,
+set width to ~1024px), or upload as-is and ask for help resizing
+later.
