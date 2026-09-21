@@ -20,5 +20,11 @@ const GALLERY = [
   {"i": 18, "url": "work-images/1991-thread-epoxy-plywood.jpg", "year": 1991, "decade": 1990},
   {"i": 19, "url": "work-images/1992-oil-plywood.jpg", "year": 1992, "decade": 1990},
   {"i": 20, "url": "work-images/1992-acrylic-copper-lino-plywood.jpg", "year": 1992, "decade": 1990},
-  {"i": 21, "url": "work-images/1992-acrylic-lino.jpg", "year": 1992, "decade": 1990}
+  {"i": 21, "url": "work-images/1992-acrylic-lino.jpg", "year": 1992, "decade": 1990},
+  {"i": 22, "url": "work-images/1993-chardin-ball.jpg", "year": 1993, "decade": 1990},
+  {"i": 23, "url": "work-images/1993-mondrians-column.jpg", "year": 1993, "decade": 1990},
+  {"i": 24, "url": "work-images/1993-problems-of-painting.jpg", "year": 1993, "decade": 1990},
+  {"i": 25, "url": "work-images/1993-things-acrylic-plywood.jpg", "year": 1993, "decade": 1990},
+  {"i": 26, "url": "work-images/1993-edguniv.jpg", "year": 1993, "decade": 1990},
+  {"i": 27, "url": "work-images/1993-thgsuniv-acrylic-nails-plexi-plywood.jpg", "year": 1993, "decade": 1990}
 ];
