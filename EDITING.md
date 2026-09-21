@@ -87,7 +87,12 @@ it until something references it:
 
 - **Work gallery** (`index.html`): also needs a new line in
   `gallery_data.js` — copy an existing line, change the `url`, `year`,
-  and `decade`.
+  and `decade`. The grid shows small copies from `work-thumbs/` (same
+  filename as in `work-images/`, but ~400px on the longest edge) so
+  the page loads fast; the full-size file in `work-images/` opens when
+  a piece is clicked. If you don't add a thumbnail, the grid still
+  works — it just falls back to the big file and loads slower. Ask
+  for help generating thumbnails whenever you add a batch.
 - **NFT page, magazine covers, etc.**: needs an `<img>` tag added to
   the relevant `.html` file pointing at the new file's path, same
   pattern as the C.V. entries above.

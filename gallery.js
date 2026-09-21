@@ -73,8 +73,9 @@
     fig.setAttribute('aria-label', 'Open plate ' + (item.i + 1) + (item.year ? ', ' + item.year : '') + ' in full view');
 
     var img = document.createElement('img');
-    img.src = item.url;
+    img.src = item.url.replace('work-images/', 'work-thumbs/'); // small grid thumb; lightbox uses full url
     img.loading = 'lazy';
+    img.onerror = function () { this.onerror = null; this.src = item.url; }; // no thumb yet: use full image
     img.alt = 'Work by Steve Armstrong' + (item.year ? ', ' + item.year : ', undated');
     fig.appendChild(img);
 
