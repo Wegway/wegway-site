@@ -26,5 +26,7 @@ const GALLERY = [
   {"i": 24, "url": "work-images/1993-problems-of-painting.jpg", "year": 1993, "decade": 1990},
   {"i": 25, "url": "work-images/1993-things-acrylic-plywood.jpg", "year": 1993, "decade": 1990},
   {"i": 26, "url": "work-images/1993-edguniv.jpg", "year": 1993, "decade": 1990},
-  {"i": 27, "url": "work-images/1993-thgsuniv-acrylic-nails-plexi-plywood.jpg", "year": 1993, "decade": 1990}
+  {"i": 27, "url": "work-images/1993-thgsuniv-acrylic-nails-plexi-plywood.jpg", "year": 1993, "decade": 1990},
+  {"i": 28, "url": "work-images/1996-newmans-acrylic-wood.jpg", "year": 1996, "decade": 1990},
+  {"i": 29, "url": "work-images/1996-acrylic-ink-graphite-paper.jpg", "year": 1996, "decade": 1990}
 ];
