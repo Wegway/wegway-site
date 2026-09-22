@@ -28,5 +28,10 @@ const GALLERY = [
   {"i": 26, "url": "work-images/1993-edguniv.jpg", "year": 1993, "decade": 1990},
   {"i": 27, "url": "work-images/1993-thgsuniv-acrylic-nails-plexi-plywood.jpg", "year": 1993, "decade": 1990},
   {"i": 28, "url": "work-images/1996-newmans-acrylic-wood.jpg", "year": 1996, "decade": 1990},
-  {"i": 29, "url": "work-images/1996-acrylic-ink-graphite-paper.jpg", "year": 1996, "decade": 1990}
+  {"i": 29, "url": "work-images/1996-acrylic-ink-graphite-paper.jpg", "year": 1996, "decade": 1990},
+  {"i": 30, "url": "work-images/1999-saturn-red-rings-acrylic-galvanized-steel.jpg", "year": 1999, "decade": 1990},
+  {"i": 31, "url": "work-images/1999-dangerous-minerals-rubber-stamp.jpg", "year": 1999, "decade": 1990},
+  {"i": 32, "url": "work-images/1999-acrylic-wood.jpg", "year": 1999, "decade": 1990},
+  {"i": 33, "url": "work-images/1999-large-saturn-acrylic-canvas-roof-nails.jpg", "year": 1999, "decade": 1990},
+  {"i": 34, "url": "work-images/1999-saturn-green-rings-acrylic-galvanized-steel.jpg", "year": 1999, "decade": 1990}
 ];
