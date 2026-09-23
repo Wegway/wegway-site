@@ -33,5 +33,20 @@ const GALLERY = [
   {"i": 31, "url": "work-images/1999-dangerous-minerals-rubber-stamp.jpg", "year": 1999, "decade": 1990},
   {"i": 32, "url": "work-images/1999-acrylic-wood.jpg", "year": 1999, "decade": 1990},
   {"i": 33, "url": "work-images/1999-large-saturn-acrylic-canvas-roof-nails.jpg", "year": 1999, "decade": 1990},
-  {"i": 34, "url": "work-images/1999-saturn-green-rings-acrylic-galvanized-steel.jpg", "year": 1999, "decade": 1990}
+  {"i": 34, "url": "work-images/1999-saturn-green-rings-acrylic-galvanized-steel.jpg", "year": 1999, "decade": 1990},
+  {"i": 35, "url": "work-images/2000-saturn-squares-mixed-media.jpg", "year": 2000, "decade": 2000},
+  {"i": 36, "url": "work-images/2000-untitled-rust-study.jpg", "year": 2000, "decade": 2000},
+  {"i": 37, "url": "work-images/2000-circle-painting-acrylic-canvas-plastic.jpg", "year": 2000, "decade": 2000},
+  {"i": 38, "url": "work-images/2000-acrylic-plastic.jpg", "year": 2000, "decade": 2000},
+  {"i": 39, "url": "work-images/2000-small-planet.jpg", "year": 2000, "decade": 2000},
+  {"i": 40, "url": "work-images/2000-untitled-acrylic-pins-paper.jpg", "year": 2000, "decade": 2000},
+  {"i": 41, "url": "work-images/2000-rust-fragment-orange.jpg", "year": 2000, "decade": 2000},
+  {"i": 42, "url": "work-images/2000-rust-fragment-green.jpg", "year": 2000, "decade": 2000},
+  {"i": 43, "url": "work-images/2000-rust-fragment-red-ring.jpg", "year": 2000, "decade": 2000},
+  {"i": 44, "url": "work-images/2000-rust-fragment-olive-l-shape.jpg", "year": 2000, "decade": 2000},
+  {"i": 45, "url": "work-images/2000-rust-fragment-purple-l-shape.jpg", "year": 2000, "decade": 2000},
+  {"i": 46, "url": "work-images/2000-rust-fragment-small-dark.jpg", "year": 2000, "decade": 2000},
+  {"i": 47, "url": "work-images/2000-metal-fragment-grey.jpg", "year": 2000, "decade": 2000},
+  {"i": 48, "url": "work-images/2000-sardine-tin-fragment.jpg", "year": 2000, "decade": 2000},
+  {"i": 49, "url": "work-images/2000-metal-fragment-grey-l-shape.jpg", "year": 2000, "decade": 2000}
 ];
