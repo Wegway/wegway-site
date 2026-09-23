@@ -50,5 +50,9 @@ const GALLERY = [
   {"i": 48, "url": "work-images/2000-sardine-tin-fragment.jpg", "year": 2000, "decade": 2000},
   {"i": 49, "url": "work-images/2000-metal-fragment-grey-l-shape.jpg", "year": 2000, "decade": 2000},
   {"i": 50, "url": "work-images/2001-embossed-orange-panel.jpg", "year": 2001, "decade": 2000},
-  {"i": 51, "url": "work-images/2005-spider-man-candy-sticks.jpg", "year": 2005, "decade": 2000}
+  {"i": 51, "url": "work-images/2005-spider-man-candy-sticks.jpg", "year": 2005, "decade": 2000},
+  {"i": 52, "url": "work-images/2005-oak-panel.jpg", "year": 2005, "decade": 2000},
+  {"i": 53, "url": "work-images/2005-graphwood-oak-frame.jpg", "year": 2005, "decade": 2000},
+  {"i": 54, "url": "work-images/2005-white-centre.jpg", "year": 2005, "decade": 2000},
+  {"i": 55, "url": "work-images/2005-vinta-crackers.jpg", "year": 2005, "decade": 2000}
 ];
