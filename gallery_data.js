@@ -85,5 +85,18 @@ const GALLERY = [
   {"i": 83, "url": "work-images/2008-comic-safety-pin-screw.jpg", "year": 2008, "decade": 2000},
   {"i": 84, "url": "work-images/2008-untitled-teal-panel.jpg", "year": 2008, "decade": 2000},
   {"i": 85, "url": "work-images/2008-acrylic-mdf-olive.jpg", "year": 2008, "decade": 2000},
-  {"i": 86, "url": "work-images/2008-pouch-cove-03.jpg", "year": 2008, "decade": 2000}
+  {"i": 86, "url": "work-images/2008-pouch-cove-03.jpg", "year": 2008, "decade": 2000},
+  {"i": 87, "url": "work-images/2009-black-acrylic-panel.jpg", "year": 2009, "decade": 2000},
+  {"i": 88, "url": "work-images/2010-colored-pencil-blue-001.jpg", "year": 2010, "decade": 2010},
+  {"i": 89, "url": "work-images/2010-colored-pencil-blue-002.jpg", "year": 2010, "decade": 2010},
+  {"i": 90, "url": "work-images/2010-acrylic-on-paper-blue.jpg", "year": 2010, "decade": 2010},
+  {"i": 91, "url": "work-images/2010-acrylic-wood-blue.jpg", "year": 2010, "decade": 2010},
+  {"i": 92, "url": "work-images/2010-untitled-acrylic-canvas-violet.jpg", "year": 2010, "decade": 2010},
+  {"i": 93, "url": "work-images/2010-untitled-colored-pencil-blue.jpg", "year": 2010, "decade": 2010},
+  {"i": 94, "url": "work-images/2012-colored-pencil-001.jpg", "year": 2012, "decade": 2010},
+  {"i": 95, "url": "work-images/2012-colored-pencil-002.jpg", "year": 2012, "decade": 2010},
+  {"i": 96, "url": "work-images/2012-modernist-sightings-comics.jpg", "year": 2012, "decade": 2010},
+  {"i": 97, "url": "work-images/2012-suspended-hofmann-phenomenon.jpg", "year": 2012, "decade": 2010},
+  {"i": 98, "url": "work-images/2013-colored-pencil-001.jpg", "year": 2013, "decade": 2010},
+  {"i": 99, "url": "work-images/2013-colored-pencil-002.jpg", "year": 2013, "decade": 2010}
 ];
