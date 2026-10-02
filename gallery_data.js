@@ -75,5 +75,15 @@ const GALLERY = [
   {"i": 73, "url": "work-images/2006-orange-blue-green-facets.jpg", "year": 2006, "decade": 2000},
   {"i": 74, "url": "work-images/2006-green-blue-salmon-facets.jpg", "year": 2006, "decade": 2000},
   {"i": 75, "url": "work-images/2006-yellow-teal-purple-facets.jpg", "year": 2006, "decade": 2000},
-  {"i": 76, "url": "work-images/2006-maroon-tag-fragment.jpg", "year": 2006, "decade": 2000}
+  {"i": 76, "url": "work-images/2006-maroon-tag-fragment.jpg", "year": 2006, "decade": 2000},
+  {"i": 77, "url": "work-images/2007-acrylic-mdf-green-dot.jpg", "year": 2007, "decade": 2000},
+  {"i": 78, "url": "work-images/2007-acrylic-mdf-blue-oval.jpg", "year": 2007, "decade": 2000},
+  {"i": 79, "url": "work-images/2007-graphite-newspaper-paperclip.jpg", "year": 2007, "decade": 2000},
+  {"i": 80, "url": "work-images/2008-pouch-cove-wires-1.jpg", "year": 2008, "decade": 2000},
+  {"i": 81, "url": "work-images/2008-comic-gear-paperclip.jpg", "year": 2008, "decade": 2000},
+  {"i": 82, "url": "work-images/2008-graphite-ink-screw.jpg", "year": 2008, "decade": 2000},
+  {"i": 83, "url": "work-images/2008-comic-safety-pin-screw.jpg", "year": 2008, "decade": 2000},
+  {"i": 84, "url": "work-images/2008-untitled-teal-panel.jpg", "year": 2008, "decade": 2000},
+  {"i": 85, "url": "work-images/2008-acrylic-mdf-olive.jpg", "year": 2008, "decade": 2000},
+  {"i": 86, "url": "work-images/2008-pouch-cove-03.jpg", "year": 2008, "decade": 2000}
 ];
