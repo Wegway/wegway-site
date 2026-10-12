@@ -98,5 +98,12 @@ const GALLERY = [
   {"i": 96, "url": "work-images/2012-modernist-sightings-comics.jpg", "year": 2012, "decade": 2010},
   {"i": 97, "url": "work-images/2012-suspended-hofmann-phenomenon.jpg", "year": 2012, "decade": 2010},
   {"i": 98, "url": "work-images/2013-colored-pencil-001.jpg", "year": 2013, "decade": 2010},
-  {"i": 99, "url": "work-images/2013-colored-pencil-002.jpg", "year": 2013, "decade": 2010}
+  {"i": 99, "url": "work-images/2013-colored-pencil-002.jpg", "year": 2013, "decade": 2010},
+  {"i": 100, "url": "work-images/2015-ledger-43-ink-acrylic.jpg", "year": 2015, "decade": 2010},
+  {"i": 101, "url": "work-images/2015-ledger-46.jpg", "year": 2015, "decade": 2010},
+  {"i": 102, "url": "work-images/2015-ledger-48.jpg", "year": 2015, "decade": 2010},
+  {"i": 103, "url": "work-images/2015-ledger-50.jpg", "year": 2015, "decade": 2010},
+  {"i": 104, "url": "work-images/2015-ledger-53.jpg", "year": 2015, "decade": 2010},
+  {"i": 105, "url": "work-images/2015-ledger-55.jpg", "year": 2015, "decade": 2010},
+  {"i": 106, "url": "work-images/2015-ledger-57.jpg", "year": 2015, "decade": 2010}
 ];
