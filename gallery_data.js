@@ -105,5 +105,17 @@ const GALLERY = [
   {"i": 103, "url": "work-images/2015-ledger-50.jpg", "year": 2015, "decade": 2010},
   {"i": 104, "url": "work-images/2015-ledger-53.jpg", "year": 2015, "decade": 2010},
   {"i": 105, "url": "work-images/2015-ledger-55.jpg", "year": 2015, "decade": 2010},
-  {"i": 106, "url": "work-images/2015-ledger-57.jpg", "year": 2015, "decade": 2010}
+  {"i": 106, "url": "work-images/2015-ledger-57.jpg", "year": 2015, "decade": 2010},
+  {"i": 107, "url": "work-images/2016-retouched-01.jpg", "year": 2016, "decade": 2010},
+  {"i": 108, "url": "work-images/2016-retouched-02.jpg", "year": 2016, "decade": 2010},
+  {"i": 109, "url": "work-images/2016-retouched-03.jpg", "year": 2016, "decade": 2010},
+  {"i": 110, "url": "work-images/2016-retouched-04.jpg", "year": 2016, "decade": 2010},
+  {"i": 111, "url": "work-images/2016-retouched-05.jpg", "year": 2016, "decade": 2010},
+  {"i": 112, "url": "work-images/2016-retouched-06.jpg", "year": 2016, "decade": 2010},
+  {"i": 113, "url": "work-images/2016-retouched-07.jpg", "year": 2016, "decade": 2010},
+  {"i": 114, "url": "work-images/2016-retouched-08.jpg", "year": 2016, "decade": 2010},
+  {"i": 115, "url": "work-images/2016-retouched-09.jpg", "year": 2016, "decade": 2010},
+  {"i": 116, "url": "work-images/2016-retouched-10.jpg", "year": 2016, "decade": 2010},
+  {"i": 117, "url": "work-images/2016-retouched-11-acrylic-on-ply.jpg", "year": 2016, "decade": 2010},
+  {"i": 118, "url": "work-images/2016-retouched-12.jpg", "year": 2016, "decade": 2010}
 ];
