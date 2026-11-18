@@ -1,70 +1,37 @@
-/* Writing page: patches the static post list with anything new from Substack.
-   Substack's own feed has no CORS headers, so browsers can't fetch it directly —
-   this routes through rss2json's free proxy, which only returns the latest 10
-   items on the no-key tier. That's enough to detect and insert new posts; the
-   full history stays as the static list already in the page. New rows link to
-   the local post.html?slug=... copy, same as the static ones, so a click-through
-   always stays on-site. If the fetch fails for any reason, the static list is
-   simply left as-is. */
+/* Writing page: builds the post list from writing_index_data.js, which
+   scripts/sync_substack.py regenerates from the Wegway Substack (the
+   "Sync Substack" GitHub Action runs it automatically). Rows link to the
+   local post.html?slug=... copy, so a click-through stays on-site. */
 (function () {
-  var FEED_URL = 'https://wegway.substack.com/feed';
-  var PROXY_URL = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED_URL);
+  var TZ = 'America/Toronto';
 
-  function stripHtml(html) {
-    var tmp = document.createElement('div');
-    tmp.innerHTML = html || '';
-    return (tmp.textContent || tmp.innerText || '').trim();
+  function partsOf(iso) {
+    var d = new Date(iso);
+    return {
+      year: Number(d.toLocaleDateString('en-US', { year: 'numeric', timeZone: TZ })),
+      label: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: TZ })
+    };
   }
 
-  function excerptFrom(html, title, nWords) {
-    var text = stripHtml(html).replace(/\s+/g, ' ').trim();
-    if (title && text.toLowerCase().indexOf(title.trim().toLowerCase()) === 0) {
-      text = text.slice(title.trim().length).replace(/^[\s\-–—:.,]+/, '');
-    }
-    var words = text.split(' ').filter(Boolean);
-    if (words.length <= nWords) return words.join(' ');
-    return words.slice(0, nWords).join(' ') + '…';
-  }
-
-  function slugFromLink(link) {
-    var m = /\/p\/([^/?#]+)/.exec(link || '');
-    return m ? m[1] : null;
-  }
-
-  function coverImageFrom(item) {
-    if (item.thumbnail) return item.thumbnail;
-    if (item.enclosure && item.enclosure.link) return item.enclosure.link;
-    var m = /<img[^>]+src="([^"]+)"/.exec(item.content || '');
-    return m ? m[1] : '';
-  }
-
-  function parseFeedDate(raw) {
-    // rss2json normalizes dates to "YYYY-MM-DD HH:MM:SS" in GMT
-    return new Date(raw.replace(' ', 'T') + 'Z');
-  }
-
-  function monthDay(date) {
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  }
-
-  function buildRow(item) {
+  function buildRow(post, label) {
     var row = document.createElement('div');
     row.className = 'entry-row';
 
     var yr = document.createElement('span');
     yr.className = 'yr';
-    yr.textContent = monthDay(item.date);
+    yr.textContent = label;
     row.appendChild(yr);
 
     var body = document.createElement('span');
     body.className = 'entry-body';
+    var href = 'post.html?slug=' + encodeURIComponent(post.slug);
 
-    if (item.thumbnail) {
+    if (post.thumbImage) {
       var thumbLink = document.createElement('a');
       thumbLink.className = 'thumb';
-      thumbLink.href = 'post.html?slug=' + item.slug;
+      thumbLink.href = href;
       var img = document.createElement('img');
-      img.src = item.thumbnail;
+      img.src = post.thumbImage;
       img.alt = '';
       img.loading = 'lazy';
       thumbLink.appendChild(img);
@@ -76,11 +43,11 @@
 
     var a = document.createElement('a');
     a.className = 'title';
-    a.href = 'post.html?slug=' + item.slug;
-    a.textContent = item.title;
+    a.href = href;
+    a.textContent = post.title;
     text.appendChild(a);
 
-    var descText = [item.subtitle, item.excerpt].filter(Boolean).join(' — ');
+    var descText = [post.subtitle, post.excerpt].filter(Boolean).join(' — ');
     if (descText) {
       var desc = document.createElement('span');
       desc.className = 'desc';
@@ -93,15 +60,7 @@
     return row;
   }
 
-  function updateCount(section) {
-    var n = section.querySelectorAll('.entry-row').length;
-    section.querySelector('.count').textContent = n + (n === 1 ? ' post' : ' posts');
-  }
-
-  function ensureYearSection(container, year) {
-    var existing = container.querySelector('.year-section[data-year="' + year + '"]');
-    if (existing) return existing;
-
+  function buildSection(year, posts) {
     var section = document.createElement('div');
     section.className = 'year-section';
     section.dataset.year = String(year);
@@ -112,68 +71,28 @@
     h2.textContent = String(year);
     var count = document.createElement('span');
     count.className = 'count';
-    count.textContent = '0 posts';
+    count.textContent = posts.length + (posts.length === 1 ? ' post' : ' posts');
     heading.appendChild(h2);
     heading.appendChild(count);
     section.appendChild(heading);
 
-    var sections = Array.prototype.slice.call(container.querySelectorAll('.year-section'));
-    var placed = false;
-    for (var i = 0; i < sections.length; i++) {
-      if (Number(sections[i].dataset.year) < year) {
-        container.insertBefore(section, sections[i]);
-        placed = true;
-        break;
-      }
-    }
-    if (!placed) container.appendChild(section);
+    posts.forEach(function (p) { section.appendChild(buildRow(p.post, p.label)); });
     return section;
   }
 
-  function addNewPosts(items) {
-    var container = document.getElementById('writingSections');
-    if (!container) return;
-
-    var existingSlugs = {};
-    Array.prototype.forEach.call(container.querySelectorAll('.entry-row a.title'), function (a) {
-      var m = /[?&]slug=([^&]+)/.exec(a.getAttribute('href') || '');
-      if (m) existingSlugs[decodeURIComponent(m[1])] = true;
-    });
-
-    var touched = {};
-    items.forEach(function (item) {
-      if (!item.slug || existingSlugs[item.slug]) return;
-      var year = item.date.getFullYear();
-      var section = ensureYearSection(container, year);
-      var heading = section.querySelector('.ledger-heading');
-      section.insertBefore(buildRow(item), heading.nextSibling);
-      touched[year] = section;
-    });
-
-    Object.keys(touched).forEach(function (year) { updateCount(touched[year]); });
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
-    fetch(PROXY_URL)
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data.status !== 'ok' || !data.items) return;
-        var items = data.items
-          .map(function (it) {
-            var title = it.title || '';
-            return {
-              title: title,
-              slug: slugFromLink(it.link),
-              date: parseFeedDate(it.pubDate),
-              subtitle: stripHtml(it.description),
-              excerpt: excerptFrom(it.content || '', title, 10),
-              thumbnail: coverImageFrom(it)
-            };
-          })
-          .filter(function (it) { return it.slug && !isNaN(it.date.getTime()); })
-          .sort(function (a, b) { return b.date - a.date; });
-        addNewPosts(items);
-      })
-      .catch(function () { /* offline or proxy down — static list stands */ });
+    var container = document.getElementById('writingSections');
+    if (!container || typeof WRITING_INDEX === 'undefined') return;
+
+    var byYear = {};
+    WRITING_INDEX.slice()
+      .sort(function (a, b) { return new Date(b.date) - new Date(a.date); })
+      .forEach(function (post) {
+        var p = partsOf(post.date);
+        (byYear[p.year] = byYear[p.year] || []).push({ post: post, label: p.label });
+      });
+
+    Object.keys(byYear).map(Number).sort(function (a, b) { return b - a; })
+      .forEach(function (year) { container.appendChild(buildSection(year, byYear[year])); });
   });
 })();

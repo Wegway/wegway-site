@@ -3,8 +3,9 @@
 This site is plain HTML/CSS — no build step, no framework. What's in
 the file is what ships. Shared styling lives in `style.css`. Most
 pages are hand-written HTML; the Work gallery (`index.html` +
-`gallery_data.js`) and Writing (`substack.html` +
-`writing_posts_data.js`) assemble themselves from data files instead.
+`gallery_data.js`) and Writing (`substack.html`, `post.html`) assemble themselves from data
+files instead. The Writing data is not edited by hand — see "Writing
+(Substack sync)" below.
 
 Publishing = getting a change onto the `main` branch of
 `github.com/Wegway/wegway-site`. GitHub Pages redeploys automatically,
@@ -115,3 +116,24 @@ is ~1024px. Uploading full-size photos still works, it just makes the
 site slower to load. Either resize first (Preview app → File → Export,
 set width to ~1024px), or upload as-is and ask for help resizing
 later.
+
+## Writing (Substack sync)
+
+The Writing page is a mirror of the Wegway Substack. You never edit it
+here — publish, edit or delete on Substack and the site follows.
+
+- A GitHub Action ("Sync Substack", `.github/workflows/sync-substack.yml`)
+  runs every ~20 minutes, reads the Substack, and regenerates
+  `writing_posts_data.js`, `writing_index_data.js` and the thumbnails in
+  `writing-thumbs/`. If nothing changed, it does nothing.
+- **New post** on Substack → appears on the site.
+- **Edited post** (text, images, title) → the site copy is refreshed.
+- **Deleted/unpublished post** → removed from the site, thumbnail too.
+- To update immediately instead of waiting: on GitHub, open the repo's
+  **Actions** tab → **Sync Substack** → **Run workflow**.
+- The Action commits to `main` itself, so in GitHub Desktop click
+  **Fetch origin** / **Pull** before making your own changes, or Desktop
+  will say your copy is behind.
+- Don't hand-edit the three generated items above; the next sync would
+  overwrite them.
+
